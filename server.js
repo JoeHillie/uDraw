@@ -37,6 +37,7 @@ app.get("/files", function(request,response){
 })
 
 
-server.listen(5050, function(){
-  console.log("yeah it works");
+var port = process.env.PORT || 3000 //changed listening port
+server.listen(port, function(){ //added variable here
+  console.log("app listening on port" + port); //and changed this message
 })
